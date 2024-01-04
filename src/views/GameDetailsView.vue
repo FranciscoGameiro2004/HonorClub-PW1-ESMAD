@@ -1,7 +1,9 @@
 <template>
-    <TeamButton/>
-    <DetailedResults/>
-    <TeamButton/>
+    <div>
+        <TeamButton/>
+        <DetailedResults/>
+        <TeamButton/>
+    </div>
     <SummarySection/>
 </template>
 

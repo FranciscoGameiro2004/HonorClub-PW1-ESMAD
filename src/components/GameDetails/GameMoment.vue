@@ -1,17 +1,17 @@
 <template>
     <div v-if="isHome">
-        <label for="">MM' </label>
-        <label for=""><b>John Doe </b></label>
-        <label for="">ACONTECIMENTO</label>
+        <label for="">{{time}}' </label>
+        <label for=""><b>{{playerName}} </b></label>
+        <label for="">{{momentType}} </label>
         <v-btn class="disabled">VER REGRA</v-btn>
         <v-btn>VER COMENTÁRIOS</v-btn>
     </div>
     <div v-else>
         <v-btn>VER COMENTÁRIOS</v-btn>
         <v-btn class="disabled">VER REGRA</v-btn>
-        <label for="">ACONTECIMENTO </label>
-        <label for=""><b>John Doe </b></label>
-        <label for="">MM'</label>
+        <label for=""> {{momentType}} </label>
+        <label for=""><b>{{playerName}} </b></label>
+        <label for="">{{ time }}'</label>
     </div>
 </template>
 
@@ -21,6 +21,18 @@ export default {
         isHome: {
             type: Boolean,
             default: true
+        },
+        time: {
+            type: Number,
+            default: 1
+        },
+        playerName: {
+            type: String,
+            default: 'John Doe'
+        },
+        momentType: {
+            type: String,
+            default: 'Try'
         }
     }
 }
