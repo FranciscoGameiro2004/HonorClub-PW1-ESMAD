@@ -1,0 +1,15 @@
+[
+    {
+        "id":0,
+        "name": "Lorem Ipsium",
+        "questions": [
+            {
+                "question": "Lorem ipsum dolor sit amet",
+                "correctAnswer": "Correct",
+                "incorrectAnswer1": "Incorrect1",
+                "incorrectAnswer2": "Incorrect2",
+                "incorrectAnswer3": "Incorrect3"
+            }
+        ]
+    }
+]

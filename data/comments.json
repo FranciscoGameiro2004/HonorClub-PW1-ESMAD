@@ -1,0 +1,9 @@
+[
+    {
+        "id": 0,
+        "user": 0,
+        "date": "AAAA-MM-DD",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor tortor eget congue ultrices. Aliquam erat volutpat. Mauris vitae auctor lorem.",
+        "replyFrom": 0
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "position": 1,
+        "stage": "NRC",
+        "team": {
+            "id": 255,
+            "name": "Cascais",
+            "logo": "https://media-4.api-sports.io/rugby/teams/255.png"
+        },
+        "points": 16,
+        "numOfPlayedGames": 0,
+        "numOfWins": 0,
+        "numOfDraws": 0,
+        "numOfLoses": 0,
+        "timePlayed": "HH:MM",
+        "form": "LLWL",
+        "description": null
+    }
+]
