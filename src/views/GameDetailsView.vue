@@ -1,10 +1,10 @@
 <template>
     <div>
-        <TeamButton/>
-        <DetailedResults/>
-        <TeamButton/>
+        <TeamButton :teamId="0"/>
+        <DetailedResults :gameId="0"/>
+        <TeamButton :teamId="1"/>
     </div>
-    <SummarySection/>
+    <SummarySection :gameId="0"/>
 </template>
 
 <script>
@@ -16,6 +16,12 @@ export default {
         TeamButton,
         DetailedResults,
         SummarySection,
+    },
+    computed: {
+        // TODO: ADICIONAR STORE DOS JOGOS
+        gameId() {
+            return this.$route.params.id
+        }
     },
 }
 </script>

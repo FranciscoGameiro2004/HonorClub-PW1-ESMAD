@@ -20,19 +20,23 @@ export default {
     props: {
         isHome: {
             type: Boolean,
-            default: true
+            default: true,
+            required: true
         },
         time: {
             type: Number,
-            default: 1
+            default: 1,
+            required: true
         },
         playerName: {
             type: String,
-            default: 'John Doe'
+            default: 'John Doe',
+            required: true
         },
         momentType: {
             type: String,
-            default: 'Try'
+            default: 'Try',
+            required: true
         }
     }
 }

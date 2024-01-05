@@ -11,7 +11,13 @@
 
 <script>
 export default {
-
+  props:{
+    gameId:{
+      type: Number,
+      required: true
+    }
+  }
+  // TODO: ADICIONAR v-data RELACIONADOS A CADA INFORMAÇÃO NECESSÁRIA
 }
 </script>
 

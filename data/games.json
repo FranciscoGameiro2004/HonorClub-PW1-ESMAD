@@ -80,7 +80,8 @@
             "minute":7,
             "type":"Try",
             "player":0,
-            "period":"first"
+            "period":"first",
+            "homeTeam": true
         }
     ],
     "statistics":{
