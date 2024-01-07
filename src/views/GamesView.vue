@@ -7,11 +7,11 @@ export default {
 
 <template>
   <div class="navbar">
-  <router-link to="/">
-    <div class="logo">
-      <img src="../assets/logo.png" alt="Logo" />
-    </div>
-  </router-link>
+    <router-link to="/">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo" />
+      </div>
+    </router-link>
 
     <div class="nav-links">
       <router-link to="/games">Jogos</router-link>
@@ -23,6 +23,11 @@ export default {
       <img src="../assets/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
+  </div>
+
+  <div class="button-container">
+      <button class="btn">Jogos</button>
+      <button class="btn">Classificação</button>
   </div>
 </template>
 
@@ -72,5 +77,26 @@ export default {
 .loggedUser {
   white-space: nowrap;
   margin-right: 60px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  left: 52%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2C4130;
+  color: #D4D6E3;
+  cursor: pointer;
 }
 </style>
