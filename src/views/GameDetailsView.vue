@@ -1,10 +1,10 @@
 <template>
-    <div class="navbar">
-  <router-link to="/">
-    <div class="logo">
-      <img src="../assets/logo.png" alt="Logo" />
-    </div>
-  </router-link>
+  <div class="navbar">
+    <router-link to="/">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo" />
+      </div>
+    </router-link>
 
     <div class="nav-links">
       <router-link to="/games">Jogos</router-link>
