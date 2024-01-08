@@ -1,7 +1,10 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
+import GameCard from '@/components/Global/GameCard.vue';
 export default {
-
+  components: {
+    GameCard,
+  }
 }
 </script>
 
@@ -26,9 +29,11 @@ export default {
   </div>
 
   <div class="button-container">
-      <button class="btn">Jogos</button>
-      <button class="btn">Classificação</button>
+    <router-link to="/games" class="btn" :class="{ 'active': $route.path === '/games'}">Jogos</router-link>
+    <router-link to="/games" class="btn" :class="{ 'active': $route.path === '/standings' }">Classificação</router-link>
   </div>
+
+  <GameCard/>
 </template>
 
 <style>
@@ -98,5 +103,15 @@ export default {
   background-color: #2C4130;
   color: #D4D6E3;
   cursor: pointer;
+}
+
+.active {
+  background-color: #623504 !important; /* Active button background color */
+}
+
+/* Apply background color to inactive buttons when not active */
+.btn:not(.active) {
+  background-color: transparent !important;
+  color: #2C4130;
 }
 </style>
