@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-center">
     <h3>ESTADO</h3>
     <h2>NN - NN</h2>
     <h4>NN - NN</h4>
@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style>
-
+  
 </style>

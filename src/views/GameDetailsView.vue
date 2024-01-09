@@ -17,10 +17,10 @@
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
   </div>
-    <div>
-        <TeamButton :teamId="0"/>
-        <DetailedResults :gameId="0"/>
-        <TeamButton :teamId="1"/>
+    <div class="d-flex justify-space-evenly pt-10">
+      <TeamButton :teamId="0"/>
+      <DetailedResults :gameId="0"/>
+      <TeamButton :teamId="1"/>
     </div>
     <SummarySection :gameId="0"/>
 </template>
