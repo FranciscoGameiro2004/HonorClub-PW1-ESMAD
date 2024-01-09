@@ -1,4 +1,8 @@
 import { defineStore } from 'pinia'
+import * as api from '../api/api.js'
+import mockData from "@/api/mocks/mocks.js"
+
+const API_BASE_URL = 'http://localhost:4000';
 
 export const useGameStore = defineStore('games', {
   state: () => ({

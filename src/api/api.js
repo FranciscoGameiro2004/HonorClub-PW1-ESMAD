@@ -1,3 +1,8 @@
+import fetchMock from "fetch-mock";
+import game from './mocks/mocks'
+
+fetchMock.mock('http://localhost:5174/games', game)
+
 /**
  * GET utility function
  * @param {string} apiBaseUrl - this is the base URL from the API
