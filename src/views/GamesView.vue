@@ -33,7 +33,11 @@ export default {
     <router-link to="/games" class="btn" :class="{ 'active': $route.path === '/standings' }">Classificação</router-link>
   </div>
 
-  <GameCard/>
+  <div class="game-cards-container">
+    <div v-for="index in 5" :key="index">
+      <GameCard/>
+    </div>
+  </div>
 </template>
 
 <style>
@@ -106,12 +110,20 @@ export default {
 }
 
 .active {
-  background-color: #623504 !important; /* Active button background color */
+  background-color: #623504 !important;
 }
 
-/* Apply background color to inactive buttons when not active */
 .btn:not(.active) {
   background-color: transparent !important;
   color: #2C4130;
+}
+
+/*Ainda falta estilizar aqui! */
+.game-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-7%);
+  gap: 10px;
 }
 </style>
