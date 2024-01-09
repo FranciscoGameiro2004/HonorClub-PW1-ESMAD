@@ -10,7 +10,6 @@
       <div class="game-details">
         <h2>NN - NN</h2>
         <h4>NN - NN</h4>
-        <h4>NN - NN</h4>
         <h5>DD-MM-AAAA às HH:MM</h5>
       </div>
       <div class="team-b">
