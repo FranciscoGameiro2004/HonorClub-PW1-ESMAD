@@ -18,34 +18,45 @@
     </div>
   </div>
     <div class="d-flex justify-space-evenly pt-10">
-      <TeamButton :teamId="0"/>
-      <DetailedResults :gameId="0"/>
-      <TeamButton :teamId="1"/>
+      <TeamButton :gameId="gameId" :home="true"/>
+      <DetailedResults :gameId="gameId"/>
+      <TeamButton :gameId="gameId" :home="false"/>
     </div>
     <SummarySection v-if="section === 0" :gameId="0"/>
+    <StatisticsSection v-else-if="section === 1"/>
 </template>
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import DetailedResults from '@/components/GameDetails/DetailedResults.vue';
 import SummarySection from '@/components/GameDetails/SummarySection.vue';
+import StatisticsSection from '@/components/GameDetails/StatisticsSection.vue';
 import TeamButton from '@/components/GameDetails/TeamButton.vue';
+import { useGameStore } from '@/stores/games';
 export default {
     components: {
         TeamButton,
         DetailedResults,
         SummarySection,
+        StatisticsSection,
     },
     data() {
       return {
-        section: 0
+        section: 0,
+        gameStore: useGameStore(),
       }
     },
     computed: {
         // TODO: ADICIONAR STORE DOS JOGOS
         gameId() {
             return this.$route.params.id
+        },
+        currentGame(){
+          return this.gameStore.getGame(this.gameId)
         }
+    },
+    created () {
+      this.gameStore.changeCurrentGameId(this.gameId);
     },
 }
 </script>
