@@ -213,7 +213,7 @@ export default {
 .title-3 {
   display: flex;
   position: relative;
-  left: -10%;
+  left: -9%;
   color: #D4D6E3;
   font-family: 'K2D-SemiBold', sans-serif;
   font-size: 70px;
