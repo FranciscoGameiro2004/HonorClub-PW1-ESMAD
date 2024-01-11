@@ -22,7 +22,7 @@
       <DetailedResults :gameId="0"/>
       <TeamButton :teamId="1"/>
     </div>
-    <SummarySection :gameId="0"/>
+    <SummarySection v-if="section === 0" :gameId="0"/>
 </template>
 
 <script>
@@ -35,6 +35,11 @@ export default {
         TeamButton,
         DetailedResults,
         SummarySection,
+    },
+    data() {
+      return {
+        section: 0
+      }
     },
     computed: {
         // TODO: ADICIONAR STORE DOS JOGOS

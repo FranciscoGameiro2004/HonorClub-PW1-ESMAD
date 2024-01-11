@@ -15,7 +15,7 @@ getters: {
   },
   actions: {
     // TODO: ADICIONAR ACTIONS DE BUSCA ATRAVÉS DA API DEPOIS DE SER FEITO OS MOCKS NECESSÁRIOS
-    async fetchGame() {
+    async fetchGames() {
       try {
         const data = await api.get(API_BASE_URL, 'game');
         this.games = data;
