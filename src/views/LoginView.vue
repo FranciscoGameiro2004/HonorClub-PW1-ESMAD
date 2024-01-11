@@ -163,6 +163,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #b46108;
+}
+
 .submit {
   display: flex;
   position: relative;
