@@ -22,8 +22,14 @@
       <DetailedResults :gameId="gameId"/>
       <TeamButton :gameId="gameId" :home="false"/>
     </div>
+    <div class="d-flex justify-center my-2">
+      <v-btn class="ms-4" @click="changeSection(0)">Resumo</v-btn>
+      <v-btn class="ms-4" @click="changeSection(1)">Estatísticas</v-btn>
+      <v-btn class="ms-4" @click="changeSection(2)">Jogadores</v-btn>
+    </div>
     <SummarySection v-if="section === 0" :gameId="0"/>
     <StatisticsSection v-else-if="section === 1"/>
+    <PlayersSection v-else-if="section === 2"/>
 </template>
 
 <script>
@@ -33,12 +39,14 @@ import SummarySection from '@/components/GameDetails/SummarySection.vue';
 import StatisticsSection from '@/components/GameDetails/StatisticsSection.vue';
 import TeamButton from '@/components/GameDetails/TeamButton.vue';
 import { useGameStore } from '@/stores/games';
+import PlayersSection from '@/components/GameDetails/PlayersSection.vue';
 export default {
     components: {
         TeamButton,
         DetailedResults,
         SummarySection,
         StatisticsSection,
+        PlayersSection,
     },
     data() {
       return {
@@ -53,7 +61,12 @@ export default {
         },
         currentGame(){
           return this.gameStore.getGame(this.gameId)
-        }
+        },
+    },
+    methods: {
+      changeSection(newSection) {
+        this.section = newSection
+      }
     },
     created () {
       this.gameStore.changeCurrentGameId(this.gameId);
