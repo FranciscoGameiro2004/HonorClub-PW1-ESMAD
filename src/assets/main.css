@@ -1,5 +1,30 @@
 @import './base.css';
 
+@font-face {
+  font-family: K2D-Bold;
+  src: url(../assets/fontes/K2D-Bold.ttf);
+}
+
+@font-face {
+  font-family: K2D-SemiBold;
+  src: url(../assets/fontes/K2D-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Baloo2-Medium;
+  src: url(../assets/fontes/Baloo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: Baloo2-Regular;
+  src: url(../assets/fontes/Baloo2-Regular.ttf);
+}
+
+@font-face {
+  font-family: Baloo2-Bold;
+  src: url(../assets/fontes/Baloo2-Bold.ttf);
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
