@@ -84,42 +84,51 @@
             "homeTeam": true
         }
     ],
-    "statistics":{
-        "tries":{
+    "statistics":[
+        {
+            "name":"Tries",
             "home":0,
             "away":0
         },
-        "convertedGoals":{
+        {
+            "name":"Converted Goals",
             "home":0,
             "away":0
         },
-        "convertedAttempts":{
+        {
+            "name":"Converted Attempts",
             "home":0,
             "away":0
         },
-        "penalties":{
+        {
+            "name":"Penalties",
             "home":0,
             "away":0
         },
-        "penaltiesAttemps":{
+        {
+            "name":"Penalty Attempts",
             "home":0,
             "away":0
         },
-        "goalsPercentage":{
+        {
+            "name":"Percentage of Goals",
             "home":0,
             "away":0
         },
-        "droppedGoals":{
+        {
+            "name":"Dropped Goals",
             "home":0,
             "away":0
         },
-        "droppedGoalAttempts":{
+        {
+            "name":"Dropped Goals Attempts",
             "home":0,
             "away":0
         },
-        "yellowCards":{
+        {
+            "name":"Yellow Cards",
             "home":0,
             "away":0
         }
-    }
+    ]
 }

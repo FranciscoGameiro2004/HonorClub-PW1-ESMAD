@@ -92,44 +92,53 @@ export const useGameStore = defineStore('games', {
               homeTeam: true
           }
       ],
-      statistics:{
-          tries:{
-              home:0,
-              away:0
-          },
-          convertedGoals:{
-              home:0,
-              away:0
-          },
-          convertedAttempts:{
-              home:0,
-              away:0
-          },
-          penalties:{
-              home:0,
-              away:0
-          },
-          penaltiesAttemps:{
-              home:0,
-              away:0
-          },
-          goalsPercentage:{
-              home:0,
-              away:0
-          },
-          droppedGoals:{
-              home:0,
-              away:0
-          },
-          droppedGoalAttempts:{
-              home:0,
-              away:0
-          },
-          yellowCards:{
-              home:0,
-              away:0
-          }
-      }
+        statistics:[
+            {
+                name: 'Tries',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Converted Goals',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Converted Attempts',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Penalties',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Penalty Attempts',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Percentage of Goals',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Dropped Goals',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Dropped Goals Attempts',
+                home:0,
+                away:0
+            },
+            {
+                name: 'Yellow Cards',
+                home:0,
+                away:0
+            }
+        ]
   }], 
     currentGameId:0
   }),

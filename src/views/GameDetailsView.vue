@@ -28,8 +28,8 @@
       <v-btn class="ms-4" @click="changeSection(2)">Jogadores</v-btn>
     </div>
     <SummarySection v-if="section === 0" :gameId="0"/>
-    <StatisticsSection v-else-if="section === 1"/>
-    <PlayersSection v-else-if="section === 2"/>
+    <StatisticsSection v-else-if="section === 1" :gameId="0"/>
+    <PlayersSection v-else-if="section === 2" :gameId="0"/>
 </template>
 
 <script>
