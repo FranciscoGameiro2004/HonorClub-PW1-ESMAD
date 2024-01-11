@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="navbar">
-    <router-link to="/">
+    <router-link to="/" class="logo">
       <div class="logo">
         <img src="../assets/logo.png" alt="Logo" />
       </div>
@@ -71,6 +71,9 @@ export default {
   background-color: #2C4130;
   color: #D4D6E3;
   z-index: 10;
+}
+.logo:hover {
+  background-color: transparent;
 }
 
 .logo img {
