@@ -40,9 +40,8 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 body, html {
-  font-family: 'Baloo2-Medium', sans-serif;
   height: 100%;
   margin: 0;
   background-color: #D4D6E3
@@ -104,6 +103,7 @@ body, html {
 }
 
 h1 {
+  font-family: 'Baloo2-SemiBold', sans-serif;
   font-size: 40px;
 }
 
@@ -134,7 +134,8 @@ form {
 
 .username-label,
 .password-label {
-  font-size: 20px;
+  font-family: 'Baloo2-SemiBold', sans-serif;
+  font-size: 5px;
 }
 
 input {
@@ -146,6 +147,7 @@ input {
 }
 
 .password {
+  font-family: 'Baloo2-Medium', sans-serif;
   display: flex;
   position: relative;
   left: 1.7%
@@ -165,8 +167,8 @@ button {
 .submit {
   display: flex;
   position: relative;
-  top: 5%;
-  left: 13%;
+  top: 3%;
+  left: 14%;
   font-size: 20px;
   color: #D4D6E3;
 }
@@ -176,6 +178,7 @@ button {
 }
 
 p {
+  font-family: 'Baloo2-Medium', sans-serif;
   margin-top: 15px;
   font-size: 15px;
   text-align: center;
