@@ -1,6 +1,5 @@
 <template>
     <div>
-      Statistics
       <StatisticalItem v-for="information in currentGame.statistics" v-bind:key="information.name" :label="information.name" :home="information.home" :away="information.away"/>
     </div>
   </template>

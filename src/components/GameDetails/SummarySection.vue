@@ -4,7 +4,7 @@
     <!--TODO: Colocar um v-for em cada GameMoment e separar cada parte do jogo-->
     <GameMoment v-for="moment in firstPeriodSummary" :key="moment.minute" :isHome="moment.homeTeam" :momentType="moment.type" :playerName="moment.player" :time="moment.minute"/>
   </div>
-  <div v-if="secondPeriodSummary.length != 0">
+  <div class="pt-6" v-if="secondPeriodSummary.length != 0">
     <h1>2ª PARTE</h1>
     <!--TODO: Colocar um v-for em cada GameMoment e separar cada parte do jogo-->
     <GameMoment  v-for="moment in secondPeriodSummary" :key="moment.minute" :isHome="moment.homeTeam" :momentType="moment.type" :playerName="moment.player" :time="moment.minute"/>

@@ -23,9 +23,9 @@
       <TeamButton :gameId="gameId" :home="false"/>
     </div>
     <div class="d-flex justify-center my-2">
-      <v-btn class="ms-4" @click="changeSection(0)">Resumo</v-btn>
-      <v-btn class="ms-4" @click="changeSection(1)">Estatísticas</v-btn>
-      <v-btn class="ms-4" @click="changeSection(2)">Jogadores</v-btn>
+      <v-btn :color="colorSummary" class="ms-4 elevation-0" @click="changeSection(0)">Resumo</v-btn>
+      <v-btn :color="colorStatistics" class="ms-4 elevation-0" @click="changeSection(1)">Estatísticas</v-btn>
+      <v-btn :color="colorPlayers" class="ms-4 elevation-0" @click="changeSection(2)">Jogadores</v-btn>
     </div>
     <SummarySection v-if="section === 0" :gameId="0"/>
     <StatisticsSection v-else-if="section === 1" :gameId="0"/>
@@ -61,6 +61,15 @@ export default {
         },
         currentGame(){
           return this.gameStore.getGame(this.gameId)
+        },
+        colorSummary(){
+          return this.section == 0 ? '#623504' : 'rgba(0,0,0,0)'
+        },
+        colorStatistics(){
+          return this.section == 1 ? '#623504' : 'rgba(0,0,0,0)'
+        },
+        colorPlayers(){
+          return this.section == 2 ? '#623504' : 'rgba(0,0,0,0)'
         },
     },
     methods: {

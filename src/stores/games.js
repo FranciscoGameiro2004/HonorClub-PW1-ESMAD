@@ -90,7 +90,7 @@ export const useGameStore = defineStore('games', {
               player:"Cristiano Ronaldo",
               period:"first",
               homeTeam: true
-          }
+          },
       ],
         statistics:[
             {
