@@ -1,10 +1,10 @@
 <template>
   <div class="text-center">
-    <h3>ESTADO</h3>
+    <h3>{{gameState}}</h3>
     <div v-if="showPontuation">
-      <h2>NN - NN</h2>
-      <h4 v-if="showFirstPoints">NN - NN</h4>
-      <h4 v-if="showSecondPoints">NN - NN</h4>
+      <h2>{{ currentGame.scores.home }} - {{ currentGame.scores.away }}</h2>
+      <h4 v-if="showFirstPoints">{{ currentGame.periods.first.home }} - {{ currentGame.periods.first.away }}</h4>
+      <h4 v-if="showSecondPoints">{{ currentGame.periods.second.home }} - {{ currentGame.periods.second.away }}</h4>
     </div>
     <div v-else>
       <h2>-</h2>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { useGameStore } from '@/stores/games'
 export default {
   props:{
     gameId:{
@@ -25,9 +26,30 @@ export default {
   // TODO: ADICIONAR v-data RELACIONADOS A CADA INFORMAÇÃO NECESSÁRIA
   data() {
     return {
-      showPontuation: true,
-      showFirstPoints: true,
-      showSecondPoints: true,
+      gameStore: useGameStore()
+    }
+  },
+  computed: {
+    currentGame() {
+      return this.gameStore.getGame(this.gameId)
+    },
+    gameState(){
+      if (this.currentGame.status.short == 'NS'){
+        return 'Agendado'
+      } else if (this.currentGame.status.short == '1H' || this.currentGame.status.short == '2H'){
+        return 'AO VIVO'
+      } else if (this.currentGame.status.short == 'FT'){
+        return 'Terminado'
+      }
+    },
+    showPontuation(){
+      return this.currentGame.status.short != 'NS'
+    },
+    showFirstPoints(){
+      return this.currentGame.status.short == '2H' || this.currentGame.status.short == 'FT'
+    },
+    showSecondPoints(){
+      return this.currentGame.status.short == '2H' || this.currentGame.status.short == 'FT'
     }
   },
 }

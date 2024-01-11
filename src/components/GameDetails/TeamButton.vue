@@ -1,18 +1,40 @@
 <template>
     <div class="text-center">
-        <img src="https://placehold.co/100x100" alt="TEAM NAME" style="height: 100px;">
-        <h2>TEAM NAME</h2>
+        <img :src="team.logo" alt="TEAM NAME" style="height: 100px;">
+        <h2>{{team.name}}</h2>
     </div>
 </template>
 
 <script>
+import { useGameStore } from '@/stores/games'
 export default {
     props:{
-        teamId:{
+        gameId:{
             type: Number,
             required: true
+        },
+        home:{
+            type: Boolean,
+            required: true
+        },
+    },
+    data() {
+        return {
+            gameStore: useGameStore()
         }
-    }
+    },
+    computed: {
+        currentGame() {
+            return this.gameStore.getGame(this.gameId)
+        },
+        team(){
+            if (this.home){
+                return this.currentGame.teams.home
+            } else {
+                return this.currentGame.teams.away
+            }
+        }
+    },
 }
 </script>
 
