@@ -123,7 +123,8 @@ export default {
   display: flex;
   position: absolute;
   top: 15%;
-  z-index: 0;
+  left: 5%;
+  z-index: 2;
 }
 
 .title-1 {
@@ -141,6 +142,7 @@ export default {
   font-family: 'Baloo2-Medium', sans-serif;
   font-size: 20px;
   margin-right: 850px;
+  text-align: left;
 }
 
 .image-1 img {
@@ -150,7 +152,7 @@ export default {
   left: 0%;
   width: 100%;
   height: 94%;
-  z-index: -1;
+  z-index: 1;
   object-fit: cover;
 }
 
@@ -211,7 +213,7 @@ export default {
 .title-3 {
   display: flex;
   position: relative;
-  left: -9%;
+  left: -10%;
   color: #D4D6E3;
   font-family: 'K2D-SemiBold', sans-serif;
   font-size: 70px;
