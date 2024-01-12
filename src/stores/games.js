@@ -26,6 +26,7 @@ export const useGameStore = defineStore('games', {
                       {
                           id:0,
                           name:"John Doe",
+                          position:"Position",
                           nationality:"PT"
                       }
                   ],
@@ -33,6 +34,7 @@ export const useGameStore = defineStore('games', {
                       {
                           id:1,
                           name:"John Doe",
+                          position:"Position",
                           nationality:"PT"
                       }
                   ]
