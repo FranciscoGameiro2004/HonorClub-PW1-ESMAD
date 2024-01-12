@@ -25,6 +25,11 @@
   src: url(../assets/fontes/Baloo2-Bold.ttf);
 }
 
+@font-face {
+  font-family: Baloo2-SemiBold;
+  src: url(../assets/fontes/Baloo2-SemiBold.ttf);
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
