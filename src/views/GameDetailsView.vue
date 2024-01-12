@@ -52,6 +52,7 @@ export default {
       return {
         section: 0,
         gameStore: useGameStore(),
+        loggedUser: sessionStorage.getItem('loggedUser') || '',
       }
     },
     computed: {

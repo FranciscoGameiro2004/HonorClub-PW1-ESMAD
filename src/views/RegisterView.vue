@@ -1,6 +1,71 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 export default {
+  data() {
+    return {
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    }
+  },
+  methods: {
+    register() {
+      // Validation logic
+      if (this.password !== this.confirmPassword) {
+        alert('As senhas não coincidem.');
+        return;
+      }
+
+      if (this.isUsernameTaken(this.username)) {
+        alert('Este nome de usuário já está em uso. Por favor, escolha outro.');
+        return;
+      }
+
+      if (this.isEmailTaken(this.email)) {
+        alert('Este email já está em uso. Por favor, use outro.');
+        return;
+      }
+
+      // Registration logic
+      const userData = {
+        username: this.username,
+        email: this.email,
+        password: this.password,
+      };
+
+      // Retrieve existing users from local storage
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+
+      // Check if username or email is already taken
+      if (existingUsers.some(user => user.username === userData.username)) {
+        alert('Este nome de usuário já está em uso. Por favor, escolha outro.');
+        return;
+      }
+
+      if (existingUsers.some(user => user.email === userData.email)) {
+        alert('Este email já está em uso. Por favor, use outro.');
+        return;
+      }
+
+      // Add the new user to the array
+      existingUsers.push(userData);
+
+      // Save the updated array back to local storage
+      localStorage.setItem('registeredUsers', JSON.stringify(existingUsers));
+
+      // Redirect to login page or perform other actions
+      this.$router.push('/login');
+    },
+    isUsernameTaken(username) {
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+      return existingUsers.some(user => user.username === username);
+    },
+    isEmailTaken(email) {
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+      return existingUsers.some(user => user.email === email);
+    },
+  },
 }
 </script>
 
@@ -18,9 +83,9 @@ export default {
     </div>
   </div>
 
-  <div class="login-container">
+  <div class="register-container">
     <h1>Olá!</h1>
-    <form @submit.prevent="login">
+    <form @submit.prevent="register">
 
       <div class="label-input">
         <label for="username" class="username-label">Username:</label>
@@ -38,12 +103,12 @@ export default {
       </div>
 
       <div class="label-input">
-        <label for="password" class="confirm-password-label">Confirmar:</label>
-        <input type="password" id="password" v-model="password" class="confirm-password" required />
+        <label for="confirmPassword" class="confirm-password-label">Confirmar:</label>
+        <input type="password" id="confirmPassword" v-model="confirmPassword" class="confirm-password" required />
       </div>
 
       <button type="submit">
-        <router-link to="/login" class="submit">Criar conta</router-link>
+        <p class="submit">Criar Conta</p>
       </button>
     </form>
     <p>Se já tiver conta, <router-link to="/login" class="login-label">inicie a sessão.</router-link></p>
@@ -117,7 +182,7 @@ h1 {
   font-size: 40px;
 }
 
-.login-container {
+.register-container {
   display: flex;
   position: absolute;
   top: 30%;
@@ -190,7 +255,7 @@ button:hover {
   display: flex;
   position: relative;
   font-family: 'Baloo2-Medium', sans-serif;
-  top: 5%;
+  top: -25%;
   left: 20%;
   font-size: 20px;
   color: #D4D6E3;

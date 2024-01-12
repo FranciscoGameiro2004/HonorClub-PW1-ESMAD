@@ -22,7 +22,11 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 export default {
-
+  data() {
+    return {
+      loggedUser: sessionStorage.getItem('loggedUser') || '',
+    }
+  },
 }
 </script>
 

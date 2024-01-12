@@ -2,6 +2,11 @@
 import { RouterLink, RouterView } from 'vue-router'
 import GameCard from '@/components/Global/GameCard.vue';
 export default {
+  data() {
+    return {
+      loggedUser: sessionStorage.getItem('loggedUser') || '',
+    }
+  },
   components: {
     GameCard,
   }

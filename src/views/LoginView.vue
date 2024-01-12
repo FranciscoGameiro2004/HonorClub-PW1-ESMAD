@@ -1,7 +1,30 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 export default {
-}
+  data() {
+    return {
+      username: '',
+      password: '',
+    };
+  },
+  methods: {
+    login() {
+      // Retrieve existing users from local storage
+      const existingUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+
+      // Find the user with the matching username and password
+      const user = existingUsers.find(u => u.username === this.username && u.password === this.password);
+
+      if (user) {
+        sessionStorage.setItem('loggedUser', this.username)
+        this.$router.push('/home');
+      } else {
+        // Invalid credentials
+        alert('Credenciais inválidas.');
+      }
+    },
+  },
+};
 </script>
 
 <template>
@@ -33,7 +56,7 @@ export default {
       </div>
 
       <button type="submit">
-        <router-link to="/home" class="submit">Iniciar Sessão</router-link>
+        <p class="submit">Iniciar sessão</p>
       </button>
     </form>
     <p>Não tem conta? <router-link to="/register" class="register-label">Criar Conta.</router-link></p>
@@ -170,8 +193,8 @@ button:hover {
 .submit {
   display: flex;
   position: relative;
-  top: 3%;
-  left: 14%;
+  top: -25%;
+  left: 15%;
   font-size: 20px;
   color: #D4D6E3;
 }
