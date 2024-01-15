@@ -146,7 +146,7 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   position: absolute;
   top: 10%;
-  font-family: 'K2D-Bold', sans-serif;
+  font-family: 'K2D-ExtraBold', sans-serif;
   font-size: 37px;
 }
 

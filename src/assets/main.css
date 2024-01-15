@@ -1,6 +1,11 @@
 @import './base.css';
 
 @font-face {
+  font-family: K2D-ExtraBold;
+  src: url(../assets/fontes/K2D-ExtraBold.ttf);
+}
+
+@font-face {
   font-family: K2D-Bold;
   src: url(../assets/fontes/K2D-Bold.ttf);
 }
