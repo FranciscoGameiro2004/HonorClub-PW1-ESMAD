@@ -17,7 +17,7 @@ export default {
   <div class="navbar">
     <router-link to="/home">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/small-elements/logo.png" alt="Logo" />
       </div>
     </router-link>
 
@@ -29,7 +29,7 @@ export default {
     </div>
 
     <div class="image-text">
-      <img src="../assets/avatar.png" alt="Image"/>
+      <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
   </div>

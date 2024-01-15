@@ -31,7 +31,7 @@ export default {
   <div class="navbar">
     <router-link to="/" class="logo">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/small-elements/logo.png" alt="Logo" />
       </div>
     </router-link>
 

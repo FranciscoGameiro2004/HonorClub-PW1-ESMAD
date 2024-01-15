@@ -3,7 +3,7 @@
       <div class="navbar">
       <router-link to="/home">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/small-elements/logo.png" alt="Logo" />
       </div>
     </router-link>
 
@@ -15,7 +15,7 @@
       </div>
 
       <div class="image-text">
-        <img src="../assets/avatar.png" alt="Image"/>
+        <img src="../assets/small-elements/avatar.png" alt="Image"/>
         <p class="loggedUser">Olá, {{ loggedUser }}!</p>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class="news-boxes">
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box1.png" alt="news-image">
+            <img src="../assets/elements/news-box1.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Reintegração do Técnico aprovada</h2>
@@ -34,7 +34,7 @@
         </div>
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box2.png" alt="news-image">
+            <img src="../assets/elements/news-box2.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Direito conquista 12.º título de campeão nacional</h2>
@@ -43,7 +43,7 @@
         </div>
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box3.png" alt="news-image">
+            <img src="../assets/elements/news-box3.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Caldas Rugby Clube perde com o Técnico</h2>
@@ -52,7 +52,7 @@
         </div>
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box4.png" alt="news-image">
+            <img src="../assets/elements/news-box4.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Rugby Club da Lousã comemora 50 anos de atividade com jantar de gala</h2>
@@ -61,7 +61,7 @@
         </div>
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box5.png" alt="news-image">
+            <img src="../assets/elements/news-box5.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Benfica perdeu frente ao Belenenses</h2>
@@ -70,7 +70,7 @@
         </div>
         <div class="news-box">
           <div class="box-left">
-            <img src="../assets/news-box6.png" alt="news-image">
+            <img src="../assets/elements/news-box6.png" alt="news-image">
           </div>
           <div class="box-right">
             <h2>Cascais e Direito disputam final</h2>

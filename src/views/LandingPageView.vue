@@ -8,7 +8,7 @@ export default {
   <div class="navbar">
     <router-link to="/" class="logo">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/small-elements/logo.png" alt="Logo" />
       </div>
     </router-link>
 
@@ -24,7 +24,7 @@ export default {
         <p class="text-1">Aprenda como funciona o râguebi e acompanhe a Divisão de Honra do país dos "lobos"!</p>
     </div>
     <div class="image-1">
-      <img src="../assets/upperContainer.png" alt="background"/>
+      <img src="../assets/background/upperContainer.png" alt="background"/>
     </div>
   </div>
 
@@ -34,7 +34,7 @@ export default {
         <p class="text-2">Desenvolvemos esta dashboard em tempo real para ofereçer cobertura detalhada da Liga de Honra. O nosso objetivo é proporcionar aos fãs de râguebi uma ferramenta acessível e dinâmica para acompanhar de perto os jogos, equipas e desempenhos na liga.</p>
     </div>
     <div class="image-2">
-      <img src="../assets/middleContainer1.png" alt="background"/>
+      <img src="../assets/background/middleContainer1.png" alt="background"/>
     </div>
   </div>
 
@@ -43,7 +43,7 @@ export default {
       <h1 class="title-3">Porquê Honor Club?</h1>
     </div>
     <div class="image-3">
-      <img src="../assets/middleContainer2.png" alt="background"/>
+      <img src="../assets/background/middleContainer2.png" alt="background"/>
     </div>
   </div>
 
@@ -53,7 +53,7 @@ export default {
       <router-link to="/register" class="register-button">Criar Conta</router-link>
     </div>
     <div class="image-4">
-      <img src="../assets/lowerContainer.png" alt="background"/>
+      <img src="../assets/background/lowerContainer.png" alt="background"/>
     </div>
   </div>
 

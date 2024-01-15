@@ -2,7 +2,7 @@
     <div class="navbar">
   <router-link to="/home">
     <div class="logo">
-      <img src="../assets/logo.png" alt="Logo" />
+      <img src="../assets/small-elements/logo.png" alt="Logo" />
     </div>
   </router-link>
 
@@ -14,7 +14,7 @@
     </div>
 
     <div class="image-text">
-      <img src="../assets/avatar.png" alt="Image"/>
+      <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
   </div>
@@ -28,7 +28,7 @@
           <!-- Box 1 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras1.jpg" alt="news-image">
+              <img src="../assets/elements/regras1.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Try</h3>
@@ -37,7 +37,7 @@
           <!-- Box 2 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras2.jpg" alt="news-image">
+              <img src="../assets/elements/regras2.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Conversão</h3>
@@ -46,7 +46,7 @@
           <!-- Box 3 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras3.jpg" alt="news-image">
+              <img src="../assets/elements/regras3.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Penalidade</h3>
@@ -55,7 +55,7 @@
           <!-- Box 4 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras4.jpg" alt="news-image">
+              <img src="../assets/elements/regras4.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Drop Goal</h3>
@@ -70,7 +70,7 @@
           <!-- Box 1 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras5.jpg" alt="news-image">
+              <img src="../assets/elements/regras5.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Pilar</h3>
@@ -79,7 +79,7 @@
           <!-- Box 2 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras6.jpg" alt="news-image">
+              <img src="../assets/elements/regras6.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Hooker</h3>
@@ -88,7 +88,7 @@
           <!-- Box 3 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras7.jpg" alt="news-image">
+              <img src="../assets/elements/regras7.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Segunda Linha</h3>
@@ -97,7 +97,7 @@
           <!-- Box 4 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras8.jpg" alt="news-image">
+              <img src="../assets/elements/regras8.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Asa</h3>
@@ -112,7 +112,7 @@
           <!-- Box 1 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras9.jpg" alt="news-image">
+              <img src="../assets/elements/regras9.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Linha de meio campo</h3>
@@ -121,7 +121,7 @@
           <!-- Box 2 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras10.jpg" alt="news-image">
+              <img src="../assets/elements/regras10.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Linha de 10 metros</h3>
@@ -130,7 +130,7 @@
           <!-- Box 3 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras11.jpg" alt="news-image">
+              <img src="../assets/elements/regras11.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Linhas de 22 metros</h3>
@@ -139,7 +139,7 @@
           <!-- Box 4 -->
           <div class="rule-box">
             <div class="box-up">
-              <img src="../assets/regras12.jpg" alt="news-image">
+              <img src="../assets/elements/regras12.jpg" alt="news-image">
             </div>
             <div class="box-down">
               <h3>Linha de bola morta</h3>
