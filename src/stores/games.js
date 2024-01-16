@@ -1,8 +1,7 @@
 import { defineStore } from 'pinia'
 import * as api from '../api/api.js'
-import mockData from "@/api/mocks/mocks.js"
 
-const API_BASE_URL = 'http://localhost:4000';
+const GAMES_API_BASE_URL = 'http://localhost:5174';
 
 export const useGameStore = defineStore('games', {
   state: () => ({
@@ -164,6 +163,15 @@ getters: {
     },
     changeCurrentGameId(newId){
       this.currentGameId = +newId
+    },
+    async fetchGames(){
+        try {
+            const data = await api.get(GAMES_API_BASE_URL, 'games')
+            this.games = data.games
+            console.log(data);
+        } catch (error) {
+            throw error
+        }
     }
   },
 })

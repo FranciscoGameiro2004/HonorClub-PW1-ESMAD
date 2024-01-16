@@ -58,7 +58,7 @@ export default {
   </div>
 
   <div class="game-cards-container">
-    <GameCard v-for="game in games" :key="game.id" @seeGameDetails="toGameDetails"/>
+    <GameCard v-for="game in games" :key="game.id" @seeGameDetails="toGameDetails" :gameId="game.id"/>
   </div>
 </template>
 

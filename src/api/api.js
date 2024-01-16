@@ -1,7 +1,7 @@
 import fetchMock from "fetch-mock";
-import game from './mocks/mocks'
+import games from './mocks/expMocks' //TODO: REVERTER DEPOIS PARA O FICHEIRO MOCKS ORIGINAL DEPOIS DE O MODIFICAR
 
-fetchMock.mock('http://localhost:5174/games', game)
+fetchMock.mock('http://localhost:5174/games', games)
 
 /**
  * GET utility function
