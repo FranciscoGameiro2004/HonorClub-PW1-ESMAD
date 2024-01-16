@@ -79,6 +79,7 @@ padding: 20px;
 width: 375px;
 margin: 20px auto;
 background-color: #D4D6E3;
+cursor: pointer;
 }
 
 h3 {
