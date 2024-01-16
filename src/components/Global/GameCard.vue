@@ -1,23 +1,24 @@
 <template>
-  <div class="game-card">
-  <h3>Terminado</h3>
+  <div class="game-card" @click="toGameDetails">
+  <h3>{{ gameState }}</h3>
   <hr>
   <div class="team-info">
     <div class="team-a">
-      <img src="https://placehold.co/100x100" alt="Equipa A">
-      <h4>Equipa A</h4>
+      <img :src="homeTeam.logo" :alt="homeTeam.name">
+      <h4>{{homeTeam.name}}</h4>
     </div>
     <div class="game-details">
-      <h2>NN - NN</h2>
-      <h4>NN - NN</h4>
-      <h5>NN:NN</h5>
+      <h2>{{ currentGame.scores.home }} - {{ currentGame.scores.away }}</h2>
+      <h4>{{ currentGame.periods.first.home }} - {{ currentGame.periods.first.away }}</h4>
+      <h4>{{ currentGame.periods.second.home }} - {{ currentGame.periods.second.away }}</h4>
+      <h5>{{date}} às {{hour}}</h5>
     </div>
     <div class="team-b">
-      <img src="https://placehold.co/100x100" alt="Equipa B">
-      <h4>Equipa B</h4>
+      <img :src="awayTeam.logo" :alt="awayTeam.name">
+      <h4>{{awayTeam.name}}</h4>
     </div>
   </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -28,16 +29,45 @@ data() {
     gameStore: useGameStore(),
   }
 },
+props: {
+  gameId: {
+    type: Number,
+    default: 0
+  },
+},
 computed: {
-  gameId() {
-      return this.$route.params.id
-    },
     currentGame(){
       return this.gameStore.getGame(this.gameId)
     },
+    homeTeam(){
+      return this.currentGame.teams.home
+    },
+    awayTeam(){
+      return this.currentGame.teams.away
+    },
+    gameState(){
+      if (this.currentGame.status.short == 'NS'){
+        return 'Agendado'
+      } else if (this.currentGame.status.short == '1H' || this.currentGame.status.short == '2H'){
+        return 'AO VIVO'
+      } else if (this.currentGame.status.short == 'FT'){
+        return 'Terminado'
+      }
+    },
+    date(){
+      return `${this.currentGame.date.slice(8,10)}-${this.currentGame.date.slice(5,7)}-${this.currentGame.date.slice(0,4)}`
+    },
+    hour(){
+      return this.currentGame.date.slice(11,16)
+    }
 },
 created () {
   this.gameStore.changeCurrentGameId(this.gameId);
+},
+methods: {
+  toGameDetails() {
+    this.$emit('seeGameDetails', this.gameId)
+  }
 },
 }
 </script>

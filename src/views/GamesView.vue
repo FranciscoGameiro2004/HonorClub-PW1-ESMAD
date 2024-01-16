@@ -16,13 +16,18 @@ export default {
     gameId() {
         return this.$route.params.id
       },
-      currentGame(){
-        return this.gameStore.getGame(this.gameId)
+      games(){
+        return this.gameStore.getGames
       },
   },
   created () {
     this.gameStore.changeCurrentGameId(this.gameId);
   },
+  methods: {
+  toGameDetails(gameId) {
+    this.$router.push({name: 'gameDetails', params: {id: gameId}})
+  }
+},
 }
 </script>
 
@@ -53,12 +58,7 @@ export default {
   </div>
 
   <div class="game-cards-container">
-    <div class="column-1">
-      <GameCard/>
-    </div>
-    <div class="column-2">
-      <GameCard/>
-    </div>
+    <GameCard v-for="game in games" :key="game.id" @seeGameDetails="toGameDetails"/>
   </div>
 </template>
 
