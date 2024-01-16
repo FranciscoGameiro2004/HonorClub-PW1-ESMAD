@@ -9,7 +9,7 @@
     <div v-else>
       <h2>-</h2>
     </div>
-    <h5>DD-MM-AAAA às HH:MM</h5>
+    <h5>{{date}} às {{hour}}</h5>
     <h5>LOCAL</h5>
   </div>
 </template>
@@ -50,6 +50,12 @@ export default {
     },
     showSecondPoints(){
       return this.currentGame.status.short == '2H' || this.currentGame.status.short == 'FT'
+    },
+    date(){
+      return `${this.currentGame.date.slice(8,10)}-${this.currentGame.date.slice(5,7)}-${this.currentGame.date.slice(0,4)}`
+    },
+    hour(){
+      return this.currentGame.date.slice(11,16)
     }
   },
 }

@@ -22,11 +22,15 @@ export default {
       gameId:{
         type: Number,
         required: true
+      },
+      minuteTime:{
+        type:Number,
+        required:true
       }
     },
     data() {
       return {
-        gameStore: useGameStore()
+        gameStore: useGameStore(),
       }
     },
     computed: {
@@ -34,10 +38,10 @@ export default {
             return this.gameStore.getGame(this.gameId)
       },
       firstPeriodSummary(){
-        return this.currentGame.summary.filter(moment => moment.period == 'first')
+        return this.currentGame.summary.filter(moment => moment.period == 'first' && moment.minute <= this.minuteTime)
       },
       secondPeriodSummary(){
-        return this.currentGame.summary.filter(moment => moment.period == 'second')
+        return this.currentGame.summary.filter(moment => moment.period == 'second' && moment.minute <= this.minuteTime)
       }
     },
 }
