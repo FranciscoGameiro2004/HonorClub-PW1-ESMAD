@@ -1,3 +1,21 @@
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+    export default {
+        data() {
+            return {
+                loggedUser: sessionStorage.getItem('loggedUser') || '',
+            }
+        },
+        methods: {
+          logout() {
+            alert('Logging out...');
+            this.$router.push('/');
+            sessionStorage.removeItem('loggedUser')
+          },
+        },
+    }
+</script>
+
 <template>
     <div class="navbar">
   <router-link to="/home">
@@ -13,7 +31,7 @@
       <router-link to="/quiz">Quiz</router-link>
     </div>
 
-    <div class="image-text">
+    <div class="image-text" @click="logout">
       <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
@@ -150,17 +168,6 @@
     </div>
 </template>
 
-<script>
-import { RouterLink, RouterView } from 'vue-router'
-    export default {
-        data() {
-            return {
-                loggedUser: sessionStorage.getItem('loggedUser') || '',
-            }
-        },
-    }
-</script>
-
 <style scoped>
 .navbar {
   position: fixed;
@@ -197,6 +204,7 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   align-items: center;
   color: #D4D6E3;
+  cursor: pointer;
 }
 
 .image-text img {

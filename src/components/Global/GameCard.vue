@@ -1,23 +1,23 @@
 <template>
   <div class="game-card" @click="toGameDetails">
-  <h3>{{ gameState }}</h3>
-  <hr>
-  <div class="team-info">
-    <div class="team-a">
-      <img :src="homeTeam.logo" :alt="homeTeam.name">
-      <h4>{{homeTeam.name}}</h4>
+    <h3>{{ gameState }}</h3>
+    <hr>
+    <div class="team-info">
+      <div class="team-a">
+        <img :src="homeTeam.logo" :alt="homeTeam.name">
+        <h4>{{homeTeam.name}}</h4>
+      </div>
+      <div class="game-details">
+        <h2>{{ currentGame.scores.home }} - {{ currentGame.scores.away }}</h2>
+        <h4>{{ currentGame.periods.first.home }} - {{ currentGame.periods.first.away }}</h4>
+        <h4>{{ currentGame.periods.second.home }} - {{ currentGame.periods.second.away }}</h4>
+        <h5>{{date}} às {{hour}}</h5>
+      </div>
+      <div class="team-b">
+        <img :src="awayTeam.logo" :alt="awayTeam.name">
+        <h4>{{awayTeam.name}}</h4>
+      </div>
     </div>
-    <div class="game-details">
-      <h2>{{ currentGame.scores.home }} - {{ currentGame.scores.away }}</h2>
-      <h4>{{ currentGame.periods.first.home }} - {{ currentGame.periods.first.away }}</h4>
-      <h4>{{ currentGame.periods.second.home }} - {{ currentGame.periods.second.away }}</h4>
-      <h5>{{date}} às {{hour}}</h5>
-    </div>
-    <div class="team-b">
-      <img :src="awayTeam.logo" :alt="awayTeam.name">
-      <h4>{{awayTeam.name}}</h4>
-    </div>
-  </div>
   </div>
 </template>
 
@@ -79,6 +79,7 @@ padding: 20px;
 width: 375px;
 margin: 20px auto;
 background-color: #D4D6E3;
+cursor: pointer;
 }
 
 h3 {
