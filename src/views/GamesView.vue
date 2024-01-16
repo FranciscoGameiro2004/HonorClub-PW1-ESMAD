@@ -1,15 +1,28 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import GameCard from '@/components/Global/GameCard.vue';
+import { useGameStore } from '@/stores/games';
 export default {
+  components: {
+    GameCard,
+  },
   data() {
     return {
       loggedUser: sessionStorage.getItem('loggedUser') || '',
+      gameStore: useGameStore(),
     }
   },
-  components: {
-    GameCard,
-  }
+  computed: {
+    gameId() {
+        return this.$route.params.id
+      },
+      currentGame(){
+        return this.gameStore.getGame(this.gameId)
+      },
+  },
+  created () {
+    this.gameStore.changeCurrentGameId(this.gameId);
+  },
 }
 </script>
 
@@ -40,13 +53,16 @@ export default {
   </div>
 
   <div class="game-cards-container">
-    <div v-for="index in 5" :key="index">
+    <div class="column-1">
+      <GameCard/>
+    </div>
+    <div class="column-2">
       <GameCard/>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .navbar {
   position: fixed;
   top: 0;
@@ -124,12 +140,18 @@ export default {
   color: #2C4130;
 }
 
-/*Ainda falta estilizar aqui! */
 .game-cards-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-7%);
-  gap: 10px;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+.column-1 {
+  margin-right: 25px;
+}
+
+.column-2 {
+  margin-left: 25px;
 }
 </style>
