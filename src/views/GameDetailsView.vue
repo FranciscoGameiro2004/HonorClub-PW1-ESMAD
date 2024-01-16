@@ -20,7 +20,7 @@
   </div>
     <div class="d-flex justify-space-evenly pt-10">
       <TeamButton :gameId="gameId" :home="true"/>
-      <DetailedResults :gameId="gameId"/>
+      <DetailedResults :gameId="gameId" :minuteTime="minuteTime"/>
       <TeamButton :gameId="gameId" :home="false"/>
     </div>
     <div class="d-flex justify-center my-2">

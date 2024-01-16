@@ -10,7 +10,7 @@
       <h2>-</h2>
     </div>
     <h5>{{date}} às {{hour}}</h5>
-    <h5>LOCAL</h5>
+    <h3 v-if="minuteTime<80">{{ minuteTime }}'</h3>
   </div>
 </template>
 
@@ -21,6 +21,10 @@ export default {
     gameId:{
       type: Number,
       required: true
+    },
+    minuteTime:{
+      type:Number,
+      required:true
     }
   },
   // TODO: ADICIONAR v-data RELACIONADOS A CADA INFORMAÇÃO NECESSÁRIA
