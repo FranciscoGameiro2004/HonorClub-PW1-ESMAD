@@ -13,7 +13,7 @@
       <router-link to="/quiz">Quiz</router-link>
     </div>
 
-    <div class="image-text">
+    <div class="image-text" @click="logout">
       <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
@@ -78,7 +78,12 @@ export default {
     methods: {
       changeSection(newSection) {
         this.section = newSection
-      }
+      },
+      logout() {
+        alert('Logging out...');
+        this.$router.push('/');
+        sessionStorage.removeItem('loggedUser')
+      },
     },
     created () {
       this.gameStore.changeCurrentGameId(this.gameId);

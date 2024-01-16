@@ -12,6 +12,16 @@ export default {
       gameStore: useGameStore(),
     }
   },
+  methods: {
+    logout() {
+      alert("Logging out...");
+      this.$router.push("/")
+      sessionStorage.removeItem('loggedUser')
+    },
+    toGameDetails(gameId) {
+    this.$router.push({name: 'gameDetails', params: {id: gameId}})
+  }
+  },
   computed: {
     gameId() {
         return this.$route.params.id
@@ -23,11 +33,6 @@ export default {
   created () {
     this.gameStore.changeCurrentGameId(this.gameId);
   },
-  methods: {
-  toGameDetails(gameId) {
-    this.$router.push({name: 'gameDetails', params: {id: gameId}})
-  }
-},
 }
 </script>
 
@@ -46,7 +51,7 @@ export default {
       <router-link to="/quiz">Quiz</router-link>
     </div>
 
-    <div class="image-text">
+    <div class="image-text" @click="logout">
       <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
@@ -95,6 +100,7 @@ export default {
   display: flex;
   align-items: center;
   color: #D4D6E3;
+  cursor: pointer;
 }
 
 .image-text img {
