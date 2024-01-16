@@ -52,10 +52,7 @@ export default {
     </div>
   </div>
 
-  <div class="button-container">
-    <router-link to="/games" class="btn" :class="{ 'active': $route.path === '/games'}">Jogos</router-link>
-    <router-link to="/games" class="btn" :class="{ 'active': $route.path === '/standings' }">Classificação</router-link>
-  </div>
+  <h1 class="title">Jogos</h1>
 
   <div class="game-cards-container">
     <GameCard v-for="game in games" :key="game.id" @seeGameDetails="toGameDetails"/>
@@ -110,34 +107,12 @@ export default {
   margin-right: 60px;
 }
 
-.button-container {
+.title {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 70px;
-  left: 52%;
-  transform: translateX(-50%);
-}
-
-.btn {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #2C4130;
-  color: #D4D6E3;
-  cursor: pointer;
-}
-
-.active {
-  background-color: #623504 !important;
-}
-
-.btn:not(.active) {
-  background-color: transparent !important;
-  color: #2C4130;
+  position: absolute;
+  top: 10%;
+  font-family: 'K2D-ExtraBold', sans-serif;
+  font-size: 37px;
 }
 
 .game-cards-container {
@@ -145,13 +120,5 @@ export default {
   position: absolute;
   top: 30%;
   left: 25%;
-}
-
-.column-1 {
-  margin-right: 25px;
-}
-
-.column-2 {
-  margin-left: 25px;
 }
 </style>
