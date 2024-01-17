@@ -113,6 +113,10 @@ import { RouterLink, RouterView } from 'vue-router'
   cursor: pointer;
 }
 
+.image-text:hover {
+  text-decoration: underline;
+}
+
 .image-text img {
   max-width: 30px;
   margin-right: 7px;

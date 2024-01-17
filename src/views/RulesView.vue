@@ -31,7 +31,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <router-link to="/quiz">Quiz</router-link>
     </div>
 
-    <div class="image-text" @click="logout">
+    <div class="nav-right" @click="logout">
       <img src="../assets/small-elements/avatar.png" alt="Image"/>
       <p class="loggedUser">Olá, {{ loggedUser }}!</p>
     </div>
@@ -200,14 +200,18 @@ import { RouterLink, RouterView } from 'vue-router'
   color: #D4D6E3;
 }
 
-.image-text {
+.nav-right {
   display: flex;
   align-items: center;
   color: #D4D6E3;
   cursor: pointer;
 }
 
-.image-text img {
+.nav-right:hover {
+  text-decoration: underline;
+}
+
+.nav-right img {
   max-width: 30px;
   margin-right: 7px;
 }
