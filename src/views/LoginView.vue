@@ -17,6 +17,7 @@ export default {
 
       if (user) {
         sessionStorage.setItem('loggedUser', this.username)
+        alert("A iniciar sessão...")
         this.$router.push('/home');
       } else {
         // Invalid credentials

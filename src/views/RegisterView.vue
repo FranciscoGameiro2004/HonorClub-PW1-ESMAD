@@ -34,10 +34,8 @@ export default {
         password: this.password,
       };
 
-      // Retrieve existing users from local storage
       const existingUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
 
-      // Check if username or email is already taken
       if (existingUsers.some(user => user.username === userData.username)) {
         alert('Este nome de usuário já está em uso. Por favor, escolha outro.');
         return;
@@ -48,13 +46,11 @@ export default {
         return;
       }
 
-      // Add the new user to the array
       existingUsers.push(userData);
 
-      // Save the updated array back to local storage
       localStorage.setItem('registeredUsers', JSON.stringify(existingUsers));
 
-      // Redirect to login page or perform other actions
+      alert("Conta criada!")
       this.$router.push('/login');
     },
     isUsernameTaken(username) {
