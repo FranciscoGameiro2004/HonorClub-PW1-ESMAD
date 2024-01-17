@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <img :src="team.logo" alt="TEAM NAME" style="height: 100px;">
+        <img :src="`../${team.logo}`" :alt="team.name" style="height: 100px;">
         <h2>{{team.name}}</h2>
     </div>
 </template>

@@ -14,7 +14,7 @@ export default{
         home: {
           id:1,
           name: "Portugal",
-          logo: "src/assets/portugal.png",
+          logo: "src/assets/flags/portugal.png",
           lineups:{
             starting:[ {
               id:1,
@@ -125,7 +125,7 @@ export default{
         away: {
           id:2,
           name: "Germany",
-          logo: "src/assets/germany.png",
+          logo: "src/assets/flags/germany.png",
           lineups: {
             starting:[
               {
@@ -421,7 +421,7 @@ export default{
         home: {
           id:3,
           name: "Ucrânia",
-          logo: "src/assets/ucrania.png",
+          logo: "src/assets/flags/ucrania.png",
           lineups:{
             starting:[ {
               id:1,
@@ -532,7 +532,7 @@ export default{
         away: {
           id:2,
           name: "Lithuania",
-          logo: "src/assets/lithuania.png",
+          logo: "src/assets/flags/lithuania.png",
           lineups: {
             starting:[
               {
@@ -828,7 +828,7 @@ export default{
         home: {
           id:5,
           name: "Suiça",
-          logo: "src/assets/suica.png",
+          logo: "src/assets/flags/suica.png",
           lineups:{
             starting:[
               {
@@ -940,7 +940,7 @@ export default{
         away: {
           id:6,
           name: "Suécia",
-          logo: "src/assets/suecia.png",
+          logo: "src/assets/flags/suecia.png",
           lineups: {
             starting:[
               {
@@ -1201,7 +1201,7 @@ export default{
         home: {
           id:7,
           name: "Croacia",
-          logo: "src/assets/croacia.png",
+          logo: "src/assets/flags/croacia.png",
           lineups:{
             starting:[
               {
@@ -1313,7 +1313,7 @@ export default{
         away: {
           id:6,
           name: "Suécia",
-          logo: "src/assets/suecia.png",
+          logo: "src/assets/flags/suecia.png",
           lineups: {
             starting:[
               {
