@@ -28,9 +28,9 @@
       <v-btn :color="colorStatistics" class="ms-4 elevation-0" @click="changeSection(1)">Estatísticas</v-btn>
       <v-btn :color="colorPlayers" class="ms-4 elevation-0" @click="changeSection(2)">Jogadores</v-btn>
     </div>
-    <SummarySection v-if="section === 0" :gameId="0" :minuteTime="minuteTime"/>
-    <StatisticsSection v-else-if="section === 1" :gameId="0"/>
-    <PlayersSection v-else-if="section === 2" :gameId="0"/>
+    <SummarySection v-if="section === 0" :gameId="gameId" :minuteTime="minuteTime"/>
+    <StatisticsSection v-else-if="section === 1" :gameId="gameId"/>
+    <PlayersSection v-else-if="section === 2" :gameId="gameId"/>
 </template>
 
 <script>
@@ -88,9 +88,7 @@ export default {
     created () {
       this.gameStore.changeCurrentGameId(this.gameId);
       setInterval(() => {
-        if(this.minuteTime < 80){
           this.minuteTime += 1
-        }
       }, 1000);
     },
 }

@@ -1,5 +1,5 @@
 import fetchMock from "fetch-mock";
-import games from './mocks/expMocks' //TODO: REVERTER DEPOIS PARA O FICHEIRO MOCKS ORIGINAL DEPOIS DE O MODIFICAR
+import games from './mocks/mocks' //TODO: REVERTER DEPOIS PARA O FICHEIRO MOCKS ORIGINAL DEPOIS DE O MODIFICAR
 
 fetchMock.mock('http://localhost:5174/games', games)
 
