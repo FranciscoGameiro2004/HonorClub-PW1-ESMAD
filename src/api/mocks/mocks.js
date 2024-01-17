@@ -124,7 +124,7 @@ export default{
         },
         away: {
           id:2,
-          name: "Germany",
+          name: "Alemanha",
           logo: "src/assets/flags/germany.png",
           lineups: {
             starting:[
