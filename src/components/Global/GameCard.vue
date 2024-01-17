@@ -74,7 +74,7 @@ methods: {
 
 <style>
 .game-card {
-border: 1px solid #2C4130;
+border: 3px solid #2C4130;
 padding: 20px;
 width: 375px;
 margin: 20px auto;
@@ -84,11 +84,14 @@ cursor: pointer;
 
 h3 {
 margin-bottom: 10px;
+font-family: 'Baloo2-Medium', sans-serif;
+font-size: 19px;
+color: #2C4130;
 }
 
 hr {
 border: none;
-border-top: 1px solid #2C4130;
+border-top: 3px solid #2C4130;
 margin-bottom: 10px;
 }
 
@@ -96,6 +99,13 @@ margin-bottom: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+
+.team-info h2,
+.team-info h4,
+.team-info h5 {
+  font-family: 'Baloo2-Regular', sans-serif;
+  color: #2C4130;
 }
 
 .team-a,
@@ -117,5 +127,7 @@ text-align: center;
 .game-details h5 {
 margin-top: 10px;
 text-align: center;
+font-family: 'Baloo2-Regular', sans-serif;
+color: #2C4130;
 }
 </style>

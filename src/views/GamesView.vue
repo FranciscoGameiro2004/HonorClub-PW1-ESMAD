@@ -127,8 +127,7 @@ export default {
 
 .game-cards-container {
   display: flex;
-  position: absolute;
-  top: 30%;
-  left: 25%;
+  flex-wrap: wrap;
+  margin-top: 110px;
 }
 </style>
